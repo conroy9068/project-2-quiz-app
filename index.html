@@ -5,32 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Audit App</title>
 </head>
 
 <body>
     <header>
         <div class="title-logo">
-            <h1>Audit App</h1>
+            <h1>JavaScript Quiz</h1>
+            <div class="header-logo">
+                <img src="assets/images/JavaScript-Logo.png" alt="Javascript Logo">
+            </div>
         </div>
     </header>
     <main>
-        <div class="question-section">
-            <div class="question">
-                <h2>Question 1</h2>
-                <p>Is perimeter hoarding secure with separate access for vehicles and pedestrians</p>
+        <!-- Start Button -->
+        <div class="start-button"><button>Start Quiz</button></div>
+
+        <!-- Quiz rules pop Up -->
+        <div class="quiz-rule-container">
+            <div>
+                <div class="quiz-rules-title">
+                    <span>Quiz rules</span>
+                </div>
             </div>
-            <div class="answer">
-                <input type="radio" name="answer" id="answer1">
-                <label for="answer1">Yes</label>
+            <div class="quiz-rules">
+                <div>1. You will have 15 seconds to answer each question</div>
+                <div>2. Your first selection is your final selection</div>
+                <div>3. You will not be able to go back to previous questions</div>
+                <div>4. You will not be able to skip questions</div>
+                <div>5. You will not be able to pause the quiz</div>
             </div>
-            <div class="answer">
-                <input type="radio" name="answer" id="answer2">
-                <label for="answer2">No</label>
-            </div>
-            <div class="answer">
-                <input type="radio" name="answer" id="answer3">
-                <label for="answer3">N/A</label>
+            <div class="buttons">
+                <button class="exit">Exit</button>
+                <button class="continue">Continue</button>
             </div>
         </div>
     </main>
