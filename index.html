@@ -13,38 +13,83 @@
     <header>
         <div class="title-logo">
             <h1>JavaScript Quiz</h1>
-            <div class="header-logo">
-                <img src="assets/images/JavaScript-Logo.png" alt="Javascript Logo">
-            </div>
+        </div>
+        <div class="header-logo">
+            <img src="assets/images/JavaScript-Logo.png" alt="Javascript Logo">
         </div>
     </header>
     <main>
-        <!-- Start Button -->
-        <div class="start-button"><button>Start Quiz</button></div>
 
-        <!-- Quiz rules pop Up -->
-        <div class="quiz-rule-container">
-            <div>
-                <div class="quiz-rules-title">
-                    <span>Quiz rules</span>
+        <!-- Quiz timer -->
+
+        <!-- Quiz area with questions and answers -->
+        <div class="quiz-container">
+            <div class="quiz-question">
+                <div class="quiz-question-title">
+                    <span>Question 1</span>
+                </div>
+                <div class="quiz-question-text">
+                    <span>Commonly used data types DO NOT include:</span>
                 </div>
             </div>
-            <div class="quiz-rules">
-                <div>1. You will have 15 seconds to answer each question</div>
-                <div>2. Your first selection is your final selection</div>
-                <div>3. You will not be able to go back to previous questions</div>
-                <div>4. You will not be able to skip questions</div>
-                <div>5. You will not be able to pause the quiz</div>
+            <div class="quiz-answers">
+                <div class="quiz-answer">
+                    <button data-type="wrong" onclick="wrongBtnQuiz()">1. strings</button>
+                </div>
+                <div class="quiz-answer">
+                    <button data-type="wrong" onclick="wrongBtnQuiz()">2. booleans</button>
+                </div>
+                <div class="quiz-answer">
+                    <button data-type="correct" onclick="correctBtnQuiz()">3. alerts</button>
+                </div>
+                <div class="quiz-answer">
+                    <button data-type="wrong" onclick="wrongBtnQuiz()">4. numbers</button>
+                </div>
             </div>
-            <div class="buttons">
-                <button class="exit">Exit</button>
-                <button class="continue">Continue</button>
+
+            <!-- Next Question button -->
+            <div class="next-question">
+                <button data-type="next" onclick="nextBtnQuiz()">Next Question</button>
+            </div>
+
+            <!-- Score -->
+            <div class="score-container">
+                <div class="score-title">
+                    <span>Score</span>
+                </div>
+                <div class="score">
+                    <span>0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz rules -->
+        <div class="quiz-rule-container">
+            <!-- Start Screen -->
+
+            <div class="start-screen">
+                <div>
+                    <div class="quiz-rules-title">
+                        <span>Quiz rules</span>
+                    </div>
+                </div>
+                <div class="quiz-rules">
+                    <div>1. You will have 15 seconds to answer each question</div>
+                    <div>2. Your first selection is your final selection</div>
+                    <div>3. You will not be able to go back to previous questions</div>
+                    <div>4. You will not be able to skip questions</div>
+                    <div>5. You will not be able to pause the quiz</div>
+                    <div class="start-button">
+                        <button data-type="start" onclick="startBtnQuiz()">Start Quiz</button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
     <footer>
 
     </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
