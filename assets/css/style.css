@@ -1,33 +1,101 @@
+/* Body styles */
 body {
-    background-color: #e4a125;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.header-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    padding: 20px 0;
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.title-logo h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.header-logo img {
+    height: 50px;
+}
+
+/* Main styles */
+main {
+    padding: 20px;
+}
+
+/* Start button styles */
+.start-button,
+.quiz-rule-container {
     text-align: center;
+    margin-bottom: 20px;
+    margin-top: 100px;
 }
 
-.start-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+.start-screen-instructions {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.start-button button {
+    top: 40%;
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.start-button Button {
-    font-size: 20px;
-    font-weight: 700;
-    color: #000000;
-    background-color: #f0be24;
-    padding: 15px 30px;
-    outline: none;
+/* Quiz rules styles */
+.quiz-rule-container {
+    /* display: none; */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.quiz-rules-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.quiz-rules div {
+    margin-bottom: 10px;
+
+}
+
+/* Quiz container styles */
+.quiz-container {
+    display: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
