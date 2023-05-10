@@ -24,34 +24,35 @@
 
         <!-- Quiz area with questions and answers -->
         <div class="quiz-container">
-            <div class="quiz-question">
-                <div class="quiz-question-title">
-                    <span>Question 1</span>
-                </div>
-                <div class="quiz-question-text">
-                    <span>Commonly used data types DO NOT include:</span>
-                </div>
-            </div>
-            <div class="quiz-answers">
-                <div class="quiz-answer">
-                    <button data-type="wrong" onclick="wrongBtnQuiz()">1. strings</button>
-                </div>
-                <div class="quiz-answer">
-                    <button data-type="wrong" onclick="wrongBtnQuiz()">2. booleans</button>
-                </div>
-                <div class="quiz-answer">
-                    <button data-type="correct" onclick="correctBtnQuiz()">3. alerts</button>
-                </div>
-                <div class="quiz-answer">
-                    <button data-type="wrong" onclick="wrongBtnQuiz()">4. numbers</button>
-                </div>
-            </div>
+            <!-- Question -->
+            <h2 id="question">Question title</h2>
+            <ul>
+                <li>
+                    <input type="radio" id="a" name="answer">
+                    <label id="a_answer" for="a">answer</label>
+                </li>
+                <li>
+                    <input type="radio" id="b" name="answer">
+                    <label id="b_answer" for="b">answer</label>
+                </li>
+                <li>
+                    <input type="radio" id="c" name="answer">
+                    <label id="c_answer" for="c">answer</label>
+                </li>
+                <li>
+                    <input type="radio" id="d" name="answer">
+                    <label id="d_answer" for="d">answer</label>
+                </li>
+            </ul>
+
 
             <!-- Next Question button -->
             <div class="next-question">
                 <button data-type="next" onclick="nextBtnQuiz()">Next Question</button>
             </div>
 
+        </div>
+        <div class="quiz-stats">
             <!-- Score -->
             <div class="score-container">
                 <div class="score-title">
@@ -62,7 +63,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Quiz rules -->
         <div class="quiz-rule-container">
             <!-- Start Screen -->
