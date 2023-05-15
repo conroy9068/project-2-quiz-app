@@ -1,3 +1,10 @@
+// timer to be set for each question depending on difficulty
+// show code snippets for some questions,the snippet will be a loop or a function and the user will need to guess the output
+// add tailwindcss to the project
+
+/**
+ * quizData array contains the quiz questions and answers
+ */
 const quizData = [{
     question: "What is JavaScript?",
     a: "programming language used to create interactive effects within web browsers",
@@ -12,6 +19,27 @@ const quizData = [{
     c: "String, Number, Boolean, Object, Undefined, Null",
     d: "String, Number, Boolean, Object, Undefined, Null, Symbol",
     correct: "c",
+}, {
+    question: "What is the correct syntax for referring to an external script called 'script.js'?",
+    a: "<script src='script.js'>",
+    b: "<script href='script.js'>",
+    c: "<script name='script.js'>",
+    d: "<script link='script.js'>",
+    correct: "a",
+}, {
+    question: "What is the correct syntax for referring to an external style sheet called 'style.css'?",
+    a: "<link rel='stylesheet' href='style.css'>",
+    b: "<link rel='stylesheet' src='style.css'>",
+    c: "<link rel='stylesheet' name='style.css'>",
+    d: "<link rel='stylesheet' link='style.css'>",
+    correct: "a",
+}, {
+    question: "What is the correct syntax for referring to an external image called 'image.jpg'?",
+    a: "<img src='image.jpg'>",
+    b: "<img href='image.jpg'>",
+    c: "<img name='image.jpg'>",
+    d: "<img link='image.jpg'>",
+    correct: "a",
 }]
 
 const question = document.getElementById("question");
@@ -19,11 +47,15 @@ const a_answer = document.getElementById("a_answer");
 const b_answer = document.getElementById("b_answer");
 const c_answer = document.getElementById("c_answer");
 const d_answer = document.getElementById("d_answer");
+const submitBtn = document.getElementById("submitBtn");
 
 let currentQuestion = 0;
 
 loadQuiz();
 
+/**
+ * loadQuiz function loads the quiz questions and answers
+ */
 function loadQuiz() {
     const currentQuizData = quizData[currentQuestion];
 
@@ -36,6 +68,9 @@ function loadQuiz() {
     currentQuestion++;
 }
 
+/**
+ * startBtnQuiz function hides the quiz rules and displays the quiz questions and stats containers
+ */
 function startBtnQuiz() {
     // hide the quiz rules
     document.querySelector(".quiz-rule-container").style.display = "none";
@@ -43,3 +78,13 @@ function startBtnQuiz() {
     document.querySelector(".quiz-container").style.display = "block";
     document.querySelector(".quiz-stats").style.display = "block";
 }
+
+submitBtn.addEventListener("click", () => {
+    currentQuestion++;
+
+    if (currentQuestion < quizData.length) {
+        loadQuiz();
+    } else {
+        alert("You have reached the end of the quiz");
+    }
+});
