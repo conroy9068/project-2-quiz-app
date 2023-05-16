@@ -42,14 +42,23 @@ const quizData = [{
     correct: "a",
 }]
 
+//radio buttons
+const answerEls = document.querySelectorAll(".answer");
+//question
 const question = document.getElementById("question");
+//answers
 const a_answer = document.getElementById("a_answer");
 const b_answer = document.getElementById("b_answer");
 const c_answer = document.getElementById("c_answer");
 const d_answer = document.getElementById("d_answer");
+//submit button
 const submitBtn = document.getElementById("submitBtn");
+//score
+const scoreText = document.getElementById("score");
 
 let currentQuestion = 0;
+let answer = undefined;
+let score = 0;
 
 loadQuiz();
 
@@ -57,6 +66,7 @@ loadQuiz();
  * loadQuiz function loads the quiz questions and answers
  */
 function loadQuiz() {
+    clearAnswer();
     const currentQuizData = quizData[currentQuestion];
 
     question.innerText = currentQuizData.question;
@@ -79,12 +89,54 @@ function startBtnQuiz() {
     document.querySelector(".quiz-stats").style.display = "block";
 }
 
+/**
+ * submitBtn increments the currentQuestion variable and loads the next question. 
+ * If no more questions an alert is displayed
+ */
 submitBtn.addEventListener("click", () => {
-    currentQuestion++;
+    const answer = selectedAnswer();
 
-    if (currentQuestion < quizData.length) {
-        loadQuiz();
-    } else {
-        alert("You have reached the end of the quiz");
+    if (answer) {
+        if (answer === quizData[currentQuestion].correct) {
+            score++;
+            alert("Correct");
+        } else {
+            alert("Incorrect");
+        }
+
+        currentQuestion++;
+        if (currentQuestion < quizData.length) {
+            loadQuiz();
+        } else {
+            alert("You have reached the end of the quiz");
+        }
     }
 });
+
+/**
+ * selectedAnswer function checks if an answer has been selected. If not an alert is displayed
+ */
+function selectedAnswer() {
+    // get the selected answer
+    const answerEls = document.querySelectorAll(".answer");
+
+    let selectedAnswer = undefined;
+
+    answerEls.forEach((answerEl) => {
+        if (answerEl.checked) {
+            selectedAnswer = answerEl.id;
+        }
+        console.log(answerEl.id);
+    });
+
+    if (!selectedAnswer) {
+        alert("Please select an answer");
+    }
+    return selectedAnswer;
+}
+
+function clearAnswer() {
+    answerEls.forEach((answerEl) => {
+        answerEl.checked = false;
+    });
+}
