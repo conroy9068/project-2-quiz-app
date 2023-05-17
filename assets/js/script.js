@@ -75,7 +75,6 @@ function loadQuiz() {
     c_answer.innerText = currentQuizData.c;
     d_answer.innerText = currentQuizData.d;
 
-    currentQuestion++;
 }
 
 /**
@@ -100,6 +99,7 @@ submitBtn.addEventListener("click", () => {
         if (answer === quizData[currentQuestion].correct) {
             score++;
             alert("Correct");
+            console.log(score);
         } else {
             alert("Incorrect");
         }
