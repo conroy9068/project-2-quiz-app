@@ -1,6 +1,5 @@
 // timer to be set for each question depending on difficulty
-// show code snippets for some questions,the snippet will be a loop or a function and the user will need to guess the output
-// add tailwindcss to the project
+// show code snippets/jpgs for some questions,the snippet will be a loop or a function and the user will need to guess the output
 
 /**
  * quizData array contains the quiz questions and answers
@@ -12,6 +11,8 @@ const quizData = [{
     c: "markup language used to structure content on web pages",
     d: "graphics design software used to create web graphics",
     correct: "a",
+    timer: 10000, // 10 seconds
+
 }, {
     question: "What are the data types in JavaScript?",
     a: "String, Number, Boolean, Object, Undefined",
@@ -19,6 +20,8 @@ const quizData = [{
     c: "String, Number, Boolean, Object, Undefined, Null",
     d: "String, Number, Boolean, Object, Undefined, Null, Symbol",
     correct: "c",
+    timer: 10000, // 10 seconds
+
 }, {
     question: "What is the correct syntax for referring to an external script called 'script.js'?",
     a: "<script src='script.js'>",
@@ -26,6 +29,8 @@ const quizData = [{
     c: "<script name='script.js'>",
     d: "<script link='script.js'>",
     correct: "a",
+    timer: 10000, // 10 seconds
+
 }, {
     question: "What is the correct syntax for referring to an external style sheet called 'style.css'?",
     a: "<link rel='stylesheet' href='style.css'>",
@@ -33,6 +38,8 @@ const quizData = [{
     c: "<link rel='stylesheet' name='style.css'>",
     d: "<link rel='stylesheet' link='style.css'>",
     correct: "a",
+    timer: 15000, // 15 seconds
+
 }, {
     question: "What is the correct syntax for referring to an external image called 'image.jpg'?",
     a: "<img src='image.jpg'>",
@@ -40,6 +47,8 @@ const quizData = [{
     c: "<img name='image.jpg'>",
     d: "<img link='image.jpg'>",
     correct: "a",
+    timer: 15000, // 15 seconds
+
 }]
 
 //radio buttons
@@ -86,6 +95,10 @@ function startBtnQuiz() {
     // display the quiz and stats container
     document.querySelector(".quiz-container").style.display = "block";
     document.querySelector(".quiz-stats").style.display = "block";
+    document.querySelector(".timer-container").style.display = "block";
+
+    const currentQuizData = quizData[currentQuestion];
+    startTimer(currentQuizData.timer);
 }
 
 /**
@@ -111,7 +124,46 @@ submitBtn.addEventListener("click", () => {
             alert("You have reached the end of the quiz");
         }
     }
+    startTimer(quizData[currentQuestion].timer);
 });
+
+
+let interval; // Declare the interval variable outside the function scope
+
+/**
+ * startTimer function will take the time value from the quizData array and start the timer countdown.
+ * If the timer reaches 0 an alert is displayed. 
+ */
+function startTimer(time) {
+    // If there's an existing timer, clear it
+    if (interval) {
+        clearInterval(interval);
+    }
+
+    let timer = time / 1000; // Convert milliseconds to seconds
+    const timerElement = document.getElementById('timer');
+    interval = setInterval(timerCountdown, 1000);
+
+    function timerCountdown() {
+        timerElement.innerHTML = "Timer: " + timer + " seconds";
+        timer--;
+        if (timer < 0) {
+            clearInterval(interval);
+            timerElement.innerHTML = "Time is up";
+            let correctAnswer = quizData[currentQuestion].correct;
+            document.getElementById(correctAnswer).checked = true;
+            // increment current question only if there are more questions
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                loadQuiz();
+            } else {
+                alert("You have reached the end of the quiz");
+            }
+        }
+    }
+}
+
+
 
 /**
  * selectedAnswer function checks if an answer has been selected. If not an alert is displayed
@@ -128,7 +180,6 @@ function selectedAnswer() {
         }
         console.log(answerEl.id);
     });
-
     if (!selectedAnswer) {
         alert("Please select an answer");
     }
