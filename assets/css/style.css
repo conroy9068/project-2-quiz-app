@@ -78,6 +78,20 @@ main {
 
 }
 
+/* Timer Container styles */
+.timer-container {
+    display: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 /* Quiz container styles */
 .quiz-container {
     display: none;
