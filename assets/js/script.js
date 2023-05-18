@@ -125,6 +125,7 @@ submitBtn.addEventListener("click", () => {
         }
     }
     startTimer(quizData[currentQuestion].timer);
+    showScore();
 });
 
 
@@ -163,6 +164,14 @@ function startTimer(time) {
     }
 }
 
+/**
+ * showScore function displays the score
+ */
+function showScore() {
+    let scoreElement = document.getElementById("score");
+    scoreElement.innerHTML = "Score: " + score + " out of " + quizData.length;
+    console.log(score);
+}
 
 
 /**
