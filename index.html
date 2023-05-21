@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/dracula.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+
     <title>Audit App</title>
 </head>
 
@@ -24,7 +27,7 @@
         <!-- Timer -->
         <div class="timer-container">
             <div>
-                <label id="timer"></label>
+                <label id="timer">Timer: 00 seconds</label>
             </div>
         </div>
 
@@ -32,6 +35,8 @@
         <div class="quiz-container">
             <!-- Question -->
             <h2 id="question">Question title</h2>
+            <div id="quizCodeSnippet"></div>
+
             <ul>
                 <li>
                     <input type="radio" id="a" class="answer">
@@ -64,8 +69,8 @@
                 <div class="score-title">
                     <span>Score</span>
                 </div>
-                <div>
-                    <span class="scoreText">0</span>
+                <div id="score">
+                    <span>0</span>
                 </div>
             </div>
         </div>
@@ -96,6 +101,9 @@
 
     </footer>
     <script src="assets/js/script.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
 </body>
 
 </html>
