@@ -102,6 +102,8 @@ function showQuestion() {
     c_answer.innerText = currentQuizData.c;
     d_answer.innerText = currentQuizData.d;
 
+    // Update question counter
+    questionCounter();
     // Check if there is a code snippet and display it
     const quizCodeSnippet = document.getElementById("quizCodeSnippet");
     if (currentQuizData.codeSnippet) {
@@ -112,7 +114,10 @@ function showQuestion() {
     }
 }
 
-
+function questionCounter() {
+    let questionCounter = document.getElementById("questionCounter");
+    questionCounter.innerHTML = 'Question ' + (currentQuestion + 1) + ' of ' + quizData.length;
+}
 
 submitBtn.addEventListener("click", () => {
     const answer = selectedAnswer();
@@ -121,7 +126,6 @@ submitBtn.addEventListener("click", () => {
             score++;
             alert("Correct");
             console.log(score);
-            showScore();
         } else {
             alert("Incorrect");
         }
@@ -149,6 +153,8 @@ function nextQustionBtn() {
             clearInterval(interval);
         }
     }
+    // Update question counter
+    questionCounter();
 }
 
 function clearAnswer() {
