@@ -90,6 +90,7 @@ main {
     align-content: space-around;
     flex-wrap: wrap;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 /* Quiz container styles */
