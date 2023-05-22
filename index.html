@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/dracula.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
-
     <title>Audit App</title>
 </head>
 
@@ -22,46 +21,41 @@
         </div>
     </header>
     <main>
-
         <!-- Quiz timer -->
-        <!-- Timer -->
         <div class="timer-container">
             <div>
                 <label id="timer">Timer: 00 seconds</label>
             </div>
         </div>
-
         <!-- Quiz area with questions and answers -->
         <div class="quiz-container">
+            <!-- Question counter -->
+            <div id="questionCounter">Question 1 of 10</div>
             <!-- Question -->
             <h2 id="question">Question title</h2>
             <div id="quizCodeSnippet"></div>
-
             <ul>
                 <li>
-                    <input type="radio" id="a" class="answer">
+                    <input type="radio" id="a" class="answer" name="answer">
                     <label id="a_answer" for="a">answer</label>
                 </li>
                 <li>
-                    <input type="radio" id="b" class="answer">
+                    <input type="radio" id="b" class="answer" name="answer">
                     <label id="b_answer" for="b">answer</label>
                 </li>
                 <li>
-                    <input type="radio" id="c" class="answer">
+                    <input type="radio" id="c" class="answer" name="answer">
                     <label id="c_answer" for="c">answer</label>
                 </li>
                 <li>
-                    <input type="radio" id="d" class="answer">
+                    <input type="radio" id="d" class="answer" name="answer">
                     <label id="d_answer" for="d">answer</label>
                 </li>
             </ul>
-
-
             <!-- Next Question button -->
             <div class="next-question">
                 <button id="submitBtn">Submit Answer</button>
             </div>
-
         </div>
         <div class="quiz-stats">
             <!-- Score -->
@@ -77,7 +71,6 @@
         <!-- Quiz rules -->
         <div class="quiz-rule-container">
             <!-- Start Screen -->
-
             <div class="start-screen">
                 <div>
                     <div class="quiz-rules-title">
@@ -96,6 +89,7 @@
                 </div>
             </div>
         </div>
+
     </main>
     <footer>
 
