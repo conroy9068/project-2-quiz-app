@@ -9,8 +9,7 @@ const c_answer = document.getElementById("c_answer");
 const d_answer = document.getElementById("d_answer");
 //submit button
 const submitBtn = document.getElementById("submitBtn");
-//score
-const scoreElement = document.getElementById("score");
+
 
 let currentQuestion = 0;
 let answer = undefined;
@@ -124,6 +123,7 @@ submitBtn.addEventListener("click", () => {
     if (answer) {
         if (answer === quizData[currentQuestion].correct) {
             score++;
+            showScore(); // Update score here
             alert("Correct");
             console.log(score);
         } else {
@@ -151,6 +151,8 @@ function nextQustionBtn() {
             scoreText.innerText = score;
             // Ensure timer is cleared when the quiz ends
             clearInterval(interval);
+            showScore(); // show score here
+
         }
     }
     // Update question counter
@@ -215,6 +217,8 @@ function startTimer(time) {
  * showScore function displays the score
  */
 function showScore() {
-    scoreElement.innerHTML = "Score: " + score + " out of " + quizData.length;
+    //score
+    const scoreElement = document.getElementById("score");
+    scoreElement.innerText = score + " out of " + quizData.length;
     console.log(score);
 }
