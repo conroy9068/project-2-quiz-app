@@ -143,21 +143,36 @@ function clearAnswer() {
 function selectedAnswer() {
     // get the selected answer
     const answerEls = document.querySelectorAll(".answer");
+    const currentQuizData = quizData[currentQuestion];
 
     let selectedAnswer = undefined;
 
+    // Loop over answers and remove any previous 'correct' or 'incorrect' classes
     answerEls.forEach((answerEl) => {
+        answerEl.nextElementSibling.classList.remove('correct', 'incorrect');
         if (answerEl.checked) {
             selectedAnswer = answerEl.id;
         }
-        console.log(answerEl.id);
     });
+
+    // No answer was selected
     if (!selectedAnswer) {
         alert("Please select an answer");
+        return;
     }
 
-    return selectedAnswer;
+    // Check answer
+    if (selectedAnswer === currentQuizData.correctAnswer) {
+        document.querySelector('label[for="' + selectedAnswer + '"]').classList.add('correct');
+    } else {
+        answerEls.forEach((answerEl) => {
+            answerEl.nextElementSibling.classList.add('incorrect');
+        });
+        document.querySelector('label[for="' + currentQuizData.correctAnswer + '"]').classList.remove('incorrect');
+        document.querySelector('label[for="' + currentQuizData.correctAnswer + '"]').classList.add('correct');
+    }
 }
+
 
 /**
  * startTimer function will take the time value from the quizData array and start the timer countdown.
