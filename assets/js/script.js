@@ -49,32 +49,6 @@ const quizData = [{
         correct: "c",
         timer: 10000, // 10 seconds
 
-    }, {
-        question: "What is the correct syntax for referring to an external script called 'script.js'?",
-        a: "<script src='script.js'>",
-        b: "<script href='script.js'>",
-        c: "<script name='script.js'>",
-        d: "<script link='script.js'>",
-        correct: "a",
-        timer: 10000, // 10 seconds
-
-    }, {
-        question: "What is the correct syntax for referring to an external style sheet called 'style.css'?",
-        a: "<link rel='stylesheet' href='style.css'>",
-        b: "<link rel='stylesheet' src='style.css'>",
-        c: "<link rel='stylesheet' name='style.css'>",
-        d: "<link rel='stylesheet' link='style.css'>",
-        correct: "a",
-        timer: 15000, // 15 seconds
-
-    }, {
-        question: "What is the correct syntax for referring to an external image called 'image.jpg'?",
-        a: "<img src='image.jpg'>",
-        b: "<img href='image.jpg'>",
-        c: "<img name='image.jpg'>",
-        d: "<img link='image.jpg'>",
-        correct: "a",
-        timer: 15000, // 15 seconds
     }
 
 
@@ -147,6 +121,7 @@ function nextQustionBtn() {
             showQuestion();
         } else {
             // end quiz and show score
+            endQuiz();
             alert("You have reached the end of the quiz");
             scoreText.innerText = score;
             // Ensure timer is cleared when the quiz ends
@@ -221,4 +196,34 @@ function showScore() {
     const scoreElement = document.getElementById("score");
     scoreElement.innerText = score + " out of " + quizData.length;
     console.log(score);
+}
+
+function endQuiz() {
+    // hide the quiz and stats container
+    document.querySelector(".quiz-container").style.display = "none";
+    document.querySelector(".quiz-stats").style.display = "none";
+    document.querySelector(".timer-container").style.display = "none";
+    // display the quiz rules
+    document.querySelector(".quiz-end-container").style.display = "flex";
+
+    document.getElementById("final-score").innerHTML = "Your final score is " + score + " out of " + quizData.length;
+    // reset timer
+    clearInterval(interval);
+
+}
+
+function restartQuiz() {
+    // hide the quiz rules
+    document.querySelector(".quiz-end-container").style.display = "none";
+    // display the quiz and stats container
+    document.querySelector(".quiz-container").style.display = "block";
+    document.querySelector(".quiz-stats").style.display = "block";
+    document.querySelector(".timer-container").style.display = "block";
+
+    currentQuestion = 0;
+    score = 0;
+    clearAnswer();
+    showQuestion();
+    showScore();
+    startTimer(quizData[currentQuestion].timer);
 }

@@ -21,14 +21,14 @@
         </div>
     </header>
     <main>
+        <!-- Quiz area with questions and answers -->
+        <div class="quiz-container">
         <!-- Quiz timer -->
         <div class="timer-container">
             <div>
                 <label id="timer">Timer: 00 seconds</label>
             </div>
         </div>
-        <!-- Quiz area with questions and answers -->
-        <div class="quiz-container">
             <!-- Question counter -->
             <div id="questionCounter">Question 1 of 10</div>
             <!-- Question -->
@@ -54,17 +54,17 @@
             </ul>
             <!-- Next Question button -->
             <div class="next-question">
-                <button id="submitBtn">Submit Answer</button>
+                <button id="submitBtn" class="submitBtn">Submit Answer</button>
             </div>
-        </div>
-        <div class="quiz-stats">
-            <!-- Score -->
-            <div class="score-container">
-                <div class="score-title">
-                    <span>Score</span>
-                </div>
-                <div>
-                    <span id="score">0</span>
+            <div class="quiz-stats">
+                <!-- Score -->
+                <div class="score-container">
+                    <div class="score-title">
+                        <span>Score</span>
+                    </div>
+                    <div>
+                        <span id="score">0</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -83,13 +83,24 @@
                     <div>3. You will not be able to go back to previous questions</div>
                     <div>4. You will not be able to skip questions</div>
                     <div>5. You will not be able to pause the quiz</div>
-                    <div class="start-button">
+                    <div class="startBtn">
                         <button data-type="start" onclick="startBtnQuiz()">Start Quiz</button>
                     </div>
                 </div>
             </div>
         </div>
-
+        <!-- Quiz end screen -->
+        <div class="quiz-end-container">
+            <div class="quiz-end">
+                <div class="quiz-end-title">
+                    <span>Quiz of End</span>
+                </div>
+                <div class="quiz-end-score">
+                    <span>Congratulations on completing the Quiz</span><br />
+                    <span id="final-score"></span>
+                </div>
+                <button class="restartBtn" data-type="start" onclick="restartQuiz()">Restart</button>
+            </div>
     </main>
     <footer>
 
