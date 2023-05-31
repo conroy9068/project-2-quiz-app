@@ -31,10 +31,12 @@ main {
 }
 
 /* Start button styles */
-.start-button,
+.startBtn,
 .quiz-rule-container {
     text-align: center;
     margin-bottom: 20px;
+    margin-top: 20px;
+    height: 100vh;
 }
 
 .start-screen-instructions {
@@ -43,7 +45,7 @@ main {
     margin-bottom: 20px;
 }
 
-.start-button button {
+.startBtn button {
     top: 40%;
     font-size: 24px;
     padding: 10px 20px;
@@ -82,7 +84,7 @@ main {
 .timer-container {
     display: none;
     background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
@@ -130,8 +132,67 @@ ul li {
     margin-bottom: 10px;
 }
 
+input[type=radio] {
+    display: none;
+}
+
+input[type=radio] + label {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type=radio]:checked + label {
+    background-color: #4a5568;
+    color: #fff;
+}
+
+input[type=radio].correct + label {
+    background-color: #38a169;
+}
+
+input[type=radio].incorrect + label {
+    background-color: #e53e3e;
+}
+
+
 .buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+}
+
+.quiz-end-container {
+    display: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.submitBtn {
+    top: 40%;
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    background-color: #e4a125;
+    color: #000000;
 }
