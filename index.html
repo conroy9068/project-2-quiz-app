@@ -25,16 +25,16 @@
         <!-- Quiz area with questions and answers -->
         <div class="quiz-container">
         <!-- Quiz timer -->
-        <div class="timer-container">
-            <div>
-                <label id="timer">Timer: 00 seconds</label>
+        <div>
+            <div class="timer-container">
+                <label id="timer">Timer: 00 seconds</label><br/>
+                <!-- Question counter -->
+                <label id="questionCounter">Question 1 of 10</label>
             </div>
         </div>
-            <!-- Question counter -->
-            <div id="questionCounter">Question 1 of 10</div>
             <!-- Question -->
             <h2 id="question">Question title</h2>
-            <div id="quizCodeSnippet"></div>
+            <div id="quizCodeSnippet" class="QuizCodeSnippet"></div>
             <ul>
                 <li>
                     <input type="radio" id="a" class="answer" name="answer">
