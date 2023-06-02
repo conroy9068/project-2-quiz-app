@@ -1,14 +1,16 @@
 /* Body styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
+    background-color: #1E1E1E;
+    color: #38EF7D;
 }
 
 /* Header styles */
 header {
-    background-color: #f9f9f9;
-    color: #000000;
+    background-color: #2D2D2D;
+    color: #38EF7D;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -36,7 +38,6 @@ main {
     text-align: center;
     margin-bottom: 20px;
     margin-top: 20px;
-    height: 100vh;
 }
 
 .start-screen-instructions {
@@ -46,11 +47,23 @@ main {
 }
 
 .startBtn button {
+    font-family: 'Courier New', Courier, monospace;
     top: 40%;
     font-size: 24px;
     padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.startBtn button:hover {
+    font-family: 'Courier New', Courier, monospace;
+    top: 40%;
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #38EF7D;
+    color: #000000;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -58,8 +71,9 @@ main {
 
 /* Quiz rules styles */
 .quiz-rule-container {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    font-size: 20px;
+    background-color: #2D2D2D;
+    border: 1px solid #38EF7D;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
@@ -77,37 +91,48 @@ main {
 
 .quiz-rules div {
     margin-bottom: 10px;
-
 }
 
 /* Timer Container styles */
 .timer-container {
-    display: none;
-    background-color: #f9f9f9;
-    padding: 20px;
-    text-align: center;
+    display: flex;  
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
     justify-content: center;
-    align-content: space-around;
-    flex-wrap: wrap;
-    flex-direction: column;
     margin-bottom: 20px;
+    background-color: #2D2D2D;
+    border-radius: 5px;
+    padding: 10px;
+    color: #38EF7D; 
+    border: 2px solid #38EF7D;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.timer-container div {
+    padding: 10px 20px;
 }
 
 /* Quiz container styles */
 .quiz-container {
     display: none;
-    background-color: #f9f9f9;
+    font-size: 20px;
+    background-color: #2D2D2D;
     padding: 20px;
     text-align: center;
     justify-content: center;
     align-content: space-around;
     flex-wrap: wrap;
     flex-direction: column;
+    height: 100vh;
+    overflow: auto;
+    border: 1px solid #38EF7D;
 }
 
 .quiz-stats {
     display: none;
-    background-color: #f9f9f9;
+    background-color: #2D2D2D;
     padding: 20px;
     text-align: center;
     justify-content: center;
@@ -115,6 +140,12 @@ main {
     flex-wrap: wrap;
     flex-direction: column;
     margin-top: 20px;
+    font-size: 20px;
+    border: 2px solid #38EF7D;
+    border-radius: 5px;
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 50px;
 }
 
 ul {
@@ -134,16 +165,16 @@ input[type=radio] + label {
     display: inline-block;
     padding: 10px 20px;
     font-size: 1.2em;
-    border: 1px solid #ddd;
+    border: 1px solid #38EF7D;
     border-radius: 5px;
-    background-color: #f3f3f3;
-    color: #333;
+    background-color: #1E1E1E;
+    color: #38EF7D;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 input[type=radio]:checked + label {
-    background-color: #4a5568;
+    background-color: #5e5e5e;
     color: #fff;
 }
 
@@ -155,7 +186,6 @@ input[type=radio].incorrect + label {
     background-color: #e53e3e;
 }
 
-
 .buttons {
     display: flex;
     justify-content: space-between;
@@ -164,8 +194,10 @@ input[type=radio].incorrect + label {
 
 .quiz-end-container {
     display: none;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    font-size: 20px;
+    line-height: 50px;
+    background-color: #2D2D2D;
+    border: 1px solid #38EF7D;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
@@ -173,20 +205,45 @@ input[type=radio].incorrect + label {
     align-content: space-around;
     flex-wrap: wrap;
     flex-direction: column;
+    font-weight: bold;
 }
 
 .submitBtn {
+    font-family: 'Courier New', Courier, monospace;
     top: 40%;
     font-size: 24px;
+    margin-top: 20px;
     padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .submitBtn:hover {
-    background-color: #e4a125;
+    background-color: #38EF7D;
+    color: #000000;
+}
+
+.quizCodeSnippet {
+    font-size: 18px;
+}
+
+.restartBtn {
+    font-family: 'Courier New', Courier, monospace;
+    top: 40%;
+    font-size: 24px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.restartBtn:hover {
+    background-color: #38EF7D;
     color: #000000;
 }
