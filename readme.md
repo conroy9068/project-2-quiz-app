@@ -42,6 +42,7 @@ If this section grows too long, you may want to split it off into a separate fil
 ### Unfixed Bugs
 
 - Issue with the highlight.js library not working properly, the code Snippet is not being styleyed correctly.
+- The selectAnswer is not working now with the new feature that highlisghts the correct answer when the user selects the wrong answer.
 
 ## Deployment
 
