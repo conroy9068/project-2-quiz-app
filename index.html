@@ -5,14 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to CSS and the highlight.js library for code highlighting and font-awesome -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Script for highlight.js library -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
     <title>Javascript Quiz</title>
 </head>
 
 <body>
+    <!-- Title and logo -->
     <header>
         <div class="title-logo">
             <h1>JavaScript Quiz</h1>
@@ -21,18 +26,18 @@
             <img src="assets/images/JavaScript-Logo.png" alt="Javascript Logo">
         </div>
     </header>
+
     <main>
-        <!-- Quiz area with questions and answers -->
+        <!-- This is where the quiz takes place -->
         <div class="quiz-container">
-        <!-- Quiz timer -->
-        <div>
+
+            <!-- The timer and the question counter go here -->
             <div class="timer-container">
-                <label id="timer">Timer: 00 seconds</label><br/>
-                <!-- Question counter -->
+                <label id="timer">Timer: 00 seconds</label>
                 <label id="questionCounter">Question 1 of 10</label>
             </div>
-        </div>
-            <!-- Question -->
+
+            <!-- Here's where the question and answer choices will be displayed -->
             <h2 id="question">Question title</h2>
             <div id="quizCodeSnippet" class="QuizCodeSnippet"></div>
             <ul>
@@ -53,12 +58,14 @@
                     <label id="d_answer" for="d">answer</label>
                 </li>
             </ul>
-            <!-- Next Question button -->
+
+            <!-- The next question button is for moving to the next question -->
             <div class="next-question">
                 <button id="submitBtn" class="submitBtn">Submit Answer</button>
             </div>
+
+            <!-- Here's where the user's score will be displayed -->
             <div class="quiz-stats">
-                <!-- Score -->
                 <div class="score-container">
                     <div class="score-title">
                         <span>Score</span>
@@ -68,15 +75,12 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Quiz rules -->
+        </div> <!-- End of quiz-container -->
+        <!-- The quiz rules are displayed in this container -->
         <div class="quiz-rule-container">
-            <!-- Start Screen -->
             <div class="start-screen">
-                <div>
-                    <div class="quiz-rules-title">
-                        <span>Quiz rules</span>
-                    </div>
+                <div class="quiz-rules-title">
+                    <span>Quiz rules</span>
                 </div>
                 <div class="quiz-rules">
                     <div>1. You will have a set amount of seconds depending on the question difficulty</div>
@@ -84,32 +88,39 @@
                     <div>3. You will not be able to go back to previous questions</div>
                     <div>4. You will not be able to skip questions</div>
                     <div>5. You will not be able to pause the quiz</div>
+                    <!-- The button for starting the quiz is here -->
                     <div class="startBtn">
                         <button data-type="start" onclick="startBtnQuiz()">Start Quiz</button>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Quiz end screen -->
+        </div> <!-- End of quiz-rule-container -->
+        <!-- This is the screen that shows when the quiz ends -->
         <div class="quiz-end-container">
             <div class="quiz-end">
                 <div class="quiz-end-title">
                     <span>Quiz of End</span>
                 </div>
                 <div class="quiz-end-score">
-                    <span>Congratulations on completing the Quiz</span><br />
+                    <span>Congratulations on completing the Quiz</span>
                     <span id="final-score"></span>
                 </div>
+                <!-- The button for restarting the quiz is here -->
                 <button class="restartBtn" data-type="start" onclick="restartQuiz()">Restart</button>
             </div>
-    </main>
-    <footer>
+        </div> <!-- End of quiz-end-container -->
 
+    </main>
+
+    <footer>
+        
     </footer>
+
+    <!-- Script for highlight.js -->
     <script src="assets/js/script.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
     </script>
-</body>
 
+</body>
 </html>
