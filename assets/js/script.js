@@ -9,13 +9,11 @@ const c_answer = document.getElementById("c_answer");
 const d_answer = document.getElementById("d_answer");
 //submit button
 const submitBtn = document.getElementById("submitBtn");
-
-
+//score and counter variables
 let currentQuestion = 0;
 let answer = undefined;
 let score = 0;
 let interval = 0;
-// show code snippets/jpgs for some questions,the snippet will be a loop or a function and the user will need to guess the output
 
 /**
  * quizData array contains the quiz questions and answers
@@ -50,10 +48,12 @@ const quizData = [{
         timer: 10000, // 10 seconds
 
     }
-
-
 ]
 
+/**
+ * startBtnQuiz kicks off the quiz when the "Start Quiz" button is clicked. It gets rid of the rules, brings up the quiz and stats, along with the timer.
+ * It also gets the first question ready and starts the countdown
+ */
 function startBtnQuiz() {
     // hide the quiz rules
     document.querySelector(".quiz-rule-container").style.display = "none";
@@ -66,6 +66,10 @@ function startBtnQuiz() {
     showQuestion();
 }
 
+/**
+ * showQuestion Displays the current question and all the options the user can pick from. It takes them from the quizData array using the currentQuestion index. 
+ * It also updates the question counter, and if there's a code snippet for the current question, it'll make sure to show it.
+ */
 function showQuestion() {
     const currentQuizData = quizData[currentQuestion];
 
@@ -79,19 +83,27 @@ function showQuestion() {
     questionCounter();
     // Check if there is a code snippet and display it
     const quizCodeSnippet = document.getElementById("quizCodeSnippet");
-    if (currentQuizData.codeSnippet) {
-        quizCodeSnippet.innerHTML = `<pre><code class="javascript">${currentQuizData.codeSnippet}</code></pre>`;
-        hljs.highlightBlock(quizCodeSnippet);
-    } else {
-        quizCodeSnippet.innerHTML = "";
-    }
+        if (currentQuizData.codeSnippet) {
+            quizCodeSnippet.innerHTML = `<pre><code class="javascript">${currentQuizData.codeSnippet}</code></pre>`;
+            hljs.highlightBlock(quizCodeSnippet);
+        } else {
+            quizCodeSnippet.innerHTML = "";
+        }
 }
 
+/**
+ * questionCounter Keeps track of the current question. It shows the user which question they're on and how many questions there are in total.
+ * It also updates the question counter.
+ */
 function questionCounter() {
     let questionCounter = document.getElementById("questionCounter");
     questionCounter.innerHTML = 'Question ' + (currentQuestion + 1) + ' of ' + quizData.length;
 }
 
+/**
+ * submitBtn.addEventListener Is tied to the submit button's click event. When the user hits submit, it checks the user's answer against the correct one. 
+ * If they nailed it, it bumps up their score and lets them know they're correct.
+*/
 submitBtn.addEventListener("click", () => {
     const answer = selectedAnswer();
     if (answer) {
@@ -107,6 +119,10 @@ submitBtn.addEventListener("click", () => {
     nextQustionBtn();
 });
 
+/**
+ * nextQustionBtn Gets called when the user is done with their current question and wants to move on to the next one. It takes the selected answer, and if there is one, 
+ * it gets everything ready for the next question: increments the currentQuestion index, clears the old answer, starts the new timer, and presents the next question.
+ */
 function nextQustionBtn() {
     // get selected answer
     const answer = selectedAnswer();
@@ -134,45 +150,37 @@ function nextQustionBtn() {
     questionCounter();
 }
 
+/**
+ * clearAnswer Cleans up after the previous question by clearing the selected answer. It goes through all the answer radio buttons and turns their checked status off.
+ */
 function clearAnswer() {
     answerEls.forEach((answerEl) => {
         answerEl.checked = false;
     });
 }
 
+/**
+ * @returns the selected answer
+ * selectAnswer Works out which answer has been selected. It checks all the answer radio buttons and sees which one is checked. 
+ * If one is checked, it returns that answer's id. If nothing's checked, it tells the user to pick an answer.
+ */
 function selectedAnswer() {
     // get the selected answer
     const answerEls = document.querySelectorAll(".answer");
-    const currentQuizData = quizData[currentQuestion];
 
     let selectedAnswer = undefined;
 
-    // Loop over answers and remove any previous 'correct' or 'incorrect' classes
     answerEls.forEach((answerEl) => {
-        answerEl.nextElementSibling.classList.remove('correct', 'incorrect');
         if (answerEl.checked) {
             selectedAnswer = answerEl.id;
         }
+        console.log(answerEl.id);
     });
-
-    // No answer was selected
     if (!selectedAnswer) {
         alert("Please select an answer");
-        return;
     }
-
-    // Check answer
-    if (selectedAnswer === currentQuizData.correctAnswer) {
-        document.querySelector('label[for="' + selectedAnswer + '"]').classList.add('correct');
-    } else {
-        answerEls.forEach((answerEl) => {
-            answerEl.nextElementSibling.classList.add('incorrect');
-        });
-        document.querySelector('label[for="' + currentQuizData.correctAnswer + '"]').classList.remove('incorrect');
-        document.querySelector('label[for="' + currentQuizData.correctAnswer + '"]').classList.add('correct');
-    }
+    return selectedAnswer;
 }
-
 
 /**
  * startTimer function will take the time value from the quizData array and start the timer countdown.
@@ -194,6 +202,7 @@ function startTimer(time) {
         timerElement.innerHTML = "Timer: " + timer + " seconds";
         timer--;
         if (timer < 0) {
+            alert("Time is up");
             clearInterval(interval);
             timerElement.innerHTML = "Time is up";
             let correctAnswer = quizData[currentQuestion].correct;
@@ -204,7 +213,7 @@ function startTimer(time) {
 }
 
 /**
- * showScore function displays the score
+ * showScore refreshes the score display. It changes the text of the score element to show the user their current score and the total number of questions.
  */
 function showScore() {
     //score
@@ -213,6 +222,10 @@ function showScore() {
     console.log(score);
 }
 
+/**
+ * endQuiz takes over when the user has answered all the questions. It gets rid of the quiz, stats, and timer and shows the end screen. 
+ * It also announces the final score and resets the timer.
+ */
 function endQuiz() {
     // hide the quiz and stats container
     document.querySelector(".quiz-container").style.display = "none";
@@ -227,6 +240,11 @@ function endQuiz() {
 
 }
 
+/**
+ * restartQuiz is used when the user wants to take the quiz again. It hides the end screen, brings up the quiz, stats, 
+ * and timer, resets the currentQuestion index and the score, clears the selected answer, 
+ * displays the first question, updates the score, and starts the timer for the first question.
+ */
 function restartQuiz() {
     // hide the quiz rules
     document.querySelector(".quiz-end-container").style.display = "none";
