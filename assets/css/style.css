@@ -126,7 +126,6 @@ main {
     align-content: space-around;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 70vh;
     overflow: auto;
     border: 1px solid #38EF7D;
 }
