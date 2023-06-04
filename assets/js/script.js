@@ -135,7 +135,6 @@ function nextQustionBtn() {
             // end quiz and show score
             endQuiz();
             alert("You have reached the end of the quiz");
-            scoreText.innerText = score;
             // Ensure timer is cleared when the quiz ends
             clearInterval(interval);
             showScore(); // show score here
