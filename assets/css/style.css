@@ -3,10 +3,15 @@ body {
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    background-color: #1E1E1E;
+    background-color: #4f4f4f;
     color: #38EF7D;
 }
 
+/* Title styles */
+.title-logo h1 {
+    margin: 0;
+    font-size: 28px;
+}
 /* Header styles */
 header {
     background-color: #2D2D2D;
@@ -18,13 +23,9 @@ header {
     padding: 10px 20px;
 }
 
-.title-logo h1 {
-    margin: 0;
-    font-size: 28px;
-}
-
 .header-logo img {
     height: 50px;
+    filter: hue-rotate(90deg); /* This will make the images look green. Remove if not desired. */
 }
 
 /* Main styles */
@@ -34,18 +35,17 @@ main {
 
 /* Start button styles */
 .startBtn,
-.quiz-rule-container {
+.quiz-rule-container,
+.start-screen-instructions {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
     text-align: center;
     margin-bottom: 20px;
     margin-top: 20px;
 }
 
-.start-screen-instructions {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
+/* Start button styles */
 .startBtn button {
     font-family: 'Courier New', Courier, monospace;
     top: 40%;
@@ -83,6 +83,7 @@ main {
     flex-direction: column;
 }
 
+/* Quiz rules styles */
 .quiz-rules-title {
     font-size: 24px;
     font-weight: bold;
@@ -125,11 +126,12 @@ main {
     align-content: space-around;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 100vh;
+    height: 70vh;
     overflow: auto;
     border: 1px solid #38EF7D;
 }
 
+/* Quiz score and question counter styles */
 .quiz-stats {
     display: none;
     background-color: #2D2D2D;
@@ -148,6 +150,7 @@ main {
     margin-top: 50px;
 }
 
+/* Quiz answer button styles */
 ul {
     list-style-type: none;
     padding: 0;
@@ -164,7 +167,7 @@ input[type=radio] {
 input[type=radio] + label {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 1.2em;
+    font-size: 18px;
     border: 1px solid #38EF7D;
     border-radius: 5px;
     background-color: #1E1E1E;
@@ -192,6 +195,7 @@ input[type=radio].incorrect + label {
     margin-top: 20px;
 }
 
+/* Quiz end container styles */
 .quiz-end-container {
     display: none;
     font-size: 20px;
@@ -221,15 +225,18 @@ input[type=radio].incorrect + label {
     cursor: pointer;
 }
 
+/* Submit button styles */
 .submitBtn:hover {
     background-color: #38EF7D;
     color: #000000;
 }
 
+/* Quiz snippet styles */
 .quizCodeSnippet {
     font-size: 18px;
 }
 
+/* Quiz restart button styles */
 .restartBtn {
     font-family: 'Courier New', Courier, monospace;
     top: 40%;
@@ -247,3 +254,30 @@ input[type=radio].incorrect + label {
     background-color: #38EF7D;
     color: #000000;
 }
+
+/* Footer styles */
+.footer {
+    color: #33FF33; 
+    font-family: 'Courier New', Courier, monospace; 
+    text-align: center; 
+    padding: 20px; 
+}
+
+.icons {
+    display: flex; 
+    justify-content: center; 
+}
+
+.icons a {
+    color: #33FF33;
+    margin: 0 10px; 
+}
+
+.icons img {
+    height: 50px; 
+    filter: hue-rotate(90deg); 
+}
+
+
+/* Media queries */
+
