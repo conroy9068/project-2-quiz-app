@@ -18,7 +18,8 @@ let interval = 0;
 /**
  * quizData array contains the quiz questions and answers
  */
-const quizData = [{
+const quizData = [
+    {
         question: "What is JavaScript?",
         a: "programming language used to create interactive effects within web browsers",
         b: "database management system used to store and retrieve data",
@@ -29,16 +30,6 @@ const quizData = [{
 
     },
     {
-        question: "What does this JavaScript code output?",
-        a: "0 1 2 3 4",
-        b: "1 2 3 4 5",
-        c: "0 1 2 3 4 5",
-        d: "undefined",
-        correct: "a",
-        timer: 20000, // 20 seconds
-        codeSnippet: "for(let i = 0; i < 5; i++) { console.log(i); }",
-    },
-    {
         question: "What are the data types in JavaScript?",
         a: "String, Number, Boolean, Object, Undefined",
         b: "String, Number, Boolean, Object, Null",
@@ -46,6 +37,82 @@ const quizData = [{
         d: "String, Number, Boolean, Object, Undefined, Null, Symbol",
         correct: "c",
         timer: 10000, // 10 seconds
+    },
+    {
+        question: "What does this JavaScript code output?",
+        a: "0 1 2 3 4",
+        b: "1 2 3 4 5",
+        c: "0 1 2 3 4 5",
+        d: "undefined",
+        correct: "a",
+        timer: 15000, // 15 seconds
+        codeSnippet: "for(let i = 0; i < 5; i++) { console.log(i); }",
+    },
+    {
+        question: "How do you define a variable in JavaScript?",
+        a: "var variableName = 'value';",
+        b: "variableName : 'value';",
+        c: "define variableName = 'value';",
+        d: "variableName == 'value';",
+        correct: "a",
+        timer: 15000, // 15 seconds
+    },
+    {
+        question: "What does '==' mean in JavaScript?",
+        a: "strictly equal to",
+        b: "equal to",
+        c: "not equal to",
+        d: "greater than or equal to",
+        correct: "b",
+        timer: 15000, // 15 seconds
+    },
+    {
+        question: "What does this JavaScript code output?",
+        a: "10",
+        b: "0",
+        c: "Undefined",
+        d: "Error",
+        correct: "a",
+        timer: 20000, // 20 seconds
+        codeSnippet: "let result = 0; for(let i = 0; i <= 4; i++) { result += i; } console.log(result);",
+    },
+    {
+        question: "What method is used to add an element at the end of an array?",
+        a: "shift()",
+        b: "unshift()",
+        c: "push()",
+        d: "pop()",
+        correct: "c",
+        timer: 20000, // 20 seconds
+    },
+    {
+        question: "What is 'this' keyword in JavaScript?",
+        a: "It refers to the function in which it is called",
+        b: "It refers to the object that the function is a method of",
+        c: "It refers to the argument passed to the function",
+        d: "It refers to the global object",
+        correct: "b",
+        timer: 25000, // 25 seconds
+    },
+    {
+        question: "What does this JavaScript code output?",
+        a: "0, 2, 4, 6, 8",
+        b: "1, 3, 5, 7, 9",
+        c: "0, 1, 2, 3, 4",
+        d: "Error",
+        correct: "a",
+        timer: 25000, // 25 seconds
+        codeSnippet: "for(let i = 0; i < 10; i++) { if(i % 2 == 0) console.log(i); }",
+    },
+    {
+        question: "What does this JavaScript code output?",
+        a: "5",
+        b: "10",
+        c: "15",
+        d: "Error",
+        correct: "b",
+        timer: 25000, // 25 seconds
+        codeSnippet: "let i = 0; while(i < 5) { i++; } console.log(i*2);",
     }
 ]
 
