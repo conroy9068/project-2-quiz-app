@@ -46,7 +46,6 @@ const quizData = [{
         d: "String, Number, Boolean, Object, Undefined, Null, Symbol",
         correct: "c",
         timer: 10000, // 10 seconds
-
     }
 ]
 
@@ -61,7 +60,6 @@ function startBtnQuiz() {
     document.querySelector(".quiz-container").style.display = "block";
     document.querySelector(".quiz-stats").style.display = "block";
     document.querySelector(".timer-container").style.display = "block";
-
     startTimer(quizData[currentQuestion].timer);
     showQuestion();
 }
@@ -72,13 +70,11 @@ function startBtnQuiz() {
  */
 function showQuestion() {
     const currentQuizData = quizData[currentQuestion];
-
     question.innerText = currentQuizData.question;
     a_answer.innerText = currentQuizData.a;
     b_answer.innerText = currentQuizData.b;
     c_answer.innerText = currentQuizData.c;
     d_answer.innerText = currentQuizData.d;
-
     // Update question counter
     questionCounter();
     // Check if there is a code snippet and display it
@@ -143,7 +139,6 @@ function nextQustionBtn() {
             // Ensure timer is cleared when the quiz ends
             clearInterval(interval);
             showScore(); // show score here
-
         }
     }
     // Update question counter
@@ -167,9 +162,7 @@ function clearAnswer() {
 function selectedAnswer() {
     // get the selected answer
     const answerEls = document.querySelectorAll(".answer");
-
     let selectedAnswer = undefined;
-
     answerEls.forEach((answerEl) => {
         if (answerEl.checked) {
             selectedAnswer = answerEl.id;
@@ -187,17 +180,13 @@ function selectedAnswer() {
  * If the timer reaches 0 an alert is displayed. 
  */
 function startTimer(time) {
-    console.log('Starting timer with value:', time); // Log the timer value
-
     // Clear any existing interval
     if (interval) {
         clearInterval(interval);
     }
-
     let timer = time / 1000; // Convert milliseconds to seconds
     const timerElement = document.getElementById('timer');
     interval = setInterval(timerCountdown, 1000);
-
     function timerCountdown() {
         timerElement.innerHTML = "Timer: " + timer + " seconds";
         timer--;
@@ -233,11 +222,9 @@ function endQuiz() {
     document.querySelector(".timer-container").style.display = "none";
     // display the quiz rules
     document.querySelector(".quiz-end-container").style.display = "flex";
-
     document.getElementById("final-score").innerHTML = "Your final score is " + score + " out of " + quizData.length;
     // reset timer
     clearInterval(interval);
-
 }
 
 /**
@@ -252,7 +239,6 @@ function restartQuiz() {
     document.querySelector(".quiz-container").style.display = "block";
     document.querySelector(".quiz-stats").style.display = "block";
     document.querySelector(".timer-container").style.display = "block";
-
     currentQuestion = 0;
     score = 0;
     clearAnswer();
