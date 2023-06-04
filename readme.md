@@ -8,7 +8,17 @@ This is a quiz to test your knowledge of Javascript. The quiz will increment thr
 
 ## Features
 
-The quiz features a timer, a start button, a question section, a section to display the correct or incorrect answer, a section to display the final score, a section to enter your initials and a submit button.
+- Timer: Each question is time-bound. The time given depends on the difficulty level of the question.
+
+- Question Counter: A counter displaying the current question number and total questions is shown.
+
+- Code Snippets: Some questions include JavaScript code snippets for users to read and understand to answer the question correctly.
+
+- Quiz Rules: Rules for the quiz are provided before the start of the quiz.
+
+- Score Display: User's score is updated and displayed in real time.
+
+- Responsive Design: The web page is designed to be viewed on screens of various sizes.
 
 ### Existing Features
 
@@ -26,6 +36,8 @@ In addition, you may also use this section to discuss plans for additional featu
 
 ## Testing
 
+- Issue with the highlight.js library not working properly, the code Snippet was not being styleyed correctly. Adjustment to the css naming was the issue.
+
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
@@ -41,19 +53,19 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ### Unfixed Bugs
 
-- Issue with the highlight.js library not working properly, the code Snippet is not being styleyed correctly.
 - The selectAnswer is not working now with the new feature that highlisghts the correct answer when the user selects the wrong answer.
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub)
+The process for setting up this site using GitHub pages was as follows:
 
-- The site was deployed to GitHub pages. The steps to deploy are as follows:
-  - In the GitHub repository, navigate to the Settings tab
-  - From the source section drop-down menu, select the Master Branch
-  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+- Log in to GitHub and locate the GitHub Repository
+- At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+- On the left-hand side of the Settings page, under the code and automation section, click on "Pages".
+- Under "Source", click the dropdown called "None" and select your master branch.
+- On the right hand side of the page, under "Enviroments", you will see a link to the deployed site.
 
-The live link can be found here - https://code-institute-org.github.io/love-running-2.0/index.html
+The live link can be found here - https://conroy9068.github.io/project-2-quiz-app/[Font Awesome](https://fontawesome.com/)
 
 ## Credits
 
