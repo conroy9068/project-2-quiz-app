@@ -26,12 +26,9 @@ This is a quiz to test your knowledge of Javascript. The quiz will increment thr
 - Responsive Design: The web page is designed to be viewed on screens of various sizes.
   ![App displayed on various devices](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/am-i-responsive.png)
 
-### Existing Features
-
-- A feature i would add is to use the localStorage of the browser to store the score in the browser.
-
 ### Features Left to Implement
 
+- A feature i would add is to use the localStorage of the browser to store the score in the browser.
 - The feature to highlight the correct and wrong answers after the user submits their answer.
 - A lifeline button that can be click once and it would remove two wrong answers to leave it 50/50
 
@@ -58,6 +55,8 @@ This is a quiz to test your knowledge of Javascript. The quiz will increment thr
   ![CSS Validation test](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/css-validation.png)
 
 ### Unfixed Bugs
+
+- hightlight.js is not working on the code snippets. It works when using the defaut theme but the snippet isnt very readable. When i try use a dark theme called dracula it doesnt work.
 
 ## Deployment
 
