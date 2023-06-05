@@ -4,7 +4,7 @@
 
 This is a quiz to test your knowledge of Javascript. The quiz will increment through a total of 10 questions. Each question has a set amount of time to be answered according to the difficulty of the question. There are question about basic javascript knoledge and then there are some questions contining code that you need to study and determine the correct output. The targeted users for this app are users that want to test their javascript knowledge and have fun while doing it.
 
-![Mockup]()
+![App displayed on various devices]()
 
 ## Features
 
@@ -32,11 +32,17 @@ In addition, you may also use this section to discuss plans for additional featu
 
 ### Features Left to Implement
 
-- Another feature idea
+- The feature to highlight the correct and wrong answers after the user submits their answer.
+- A lifeline button that can be click once and it would remove two wrong answers to leave it 50/50
 
 ## Testing
 
-- Issue with the highlight.js library not working properly, the code Snippet was not being styleyed correctly. Adjustment to the css naming was the issue.
+| **TEST**            | **ACTION**                                    | **EXPECTATION**                                              | **RESULT**        |
+| ------------------- | --------------------------------------------- | ------------------------------------------------------------ | ----------------- |
+| Home page           | Size to 320px using Chrome Dev Tools          | Elements look good @ 320px                                   | Works as expected |
+| Home page           | Size to 1920px using Chrome Dev Tools         | Elements look good 1920px                                    | Works as expected |
+| Contact form        | Click send button without data in form fields | Cannot submit form                                           | Works as expected |
+| Nav bar - home page | Click nav buttons                             | That each nav element takes me to the correct page site page | Works as expected |
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
@@ -52,8 +58,6 @@ If this section grows too long, you may want to split it off into a separate fil
 - CSS
 
 ### Unfixed Bugs
-
-- The selectAnswer is not working now with the new feature that highlisghts the correct answer when the user selects the wrong answer.
 
 ## Deployment
 
