@@ -11,7 +11,6 @@ const d_answer = document.getElementById("d_answer");
 const submitBtn = document.getElementById("submitBtn");
 //score and counter variables
 let currentQuestion = 0;
-let answer = undefined;
 let score = 0;
 let interval = 0;
 
