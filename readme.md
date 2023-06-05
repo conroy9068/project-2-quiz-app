@@ -15,13 +15,13 @@ This is a quiz to test your knowledge of Javascript. The quiz will increment thr
   ![Timer and Question Counter](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/timer-question-counter.png)
 
 - Code Snippets: Some questions include JavaScript code snippets for users to read and understand to answer the question correctly.
-  ![App displayed on various devices](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/am-i-responsive.png)
+  ![Code snippets being displayed](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/code-snippet.png)
 
 - Quiz Rules: Rules for the quiz are provided before the start of the quiz.
-  ![App displayed on various devices](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/am-i-responsive.png)
+  ![Quiz start screen with rules](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/quiz-start-screen.png)
 
 - Score Display: User's score is updated and displayed in real time.
-  ![App displayed on various devices](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/am-i-responsive.png)
+  ![Score counter](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/score-counter.png)
 
 - Responsive Design: The web page is designed to be viewed on screens of various sizes.
   ![App displayed on various devices](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/am-i-responsive.png)
