@@ -28,13 +28,7 @@ This is a quiz to test your knowledge of Javascript. The quiz will increment thr
 
 ### Existing Features
 
-- **SAMPLE**
-
-  - LOREM IPSUM
-
-![]()
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+- A feature i would add is to use the localStorage of the browser to store the score in the browser.
 
 ### Features Left to Implement
 
@@ -43,25 +37,25 @@ In addition, you may also use this section to discuss plans for additional featu
 
 ## Testing
 
-| **TEST**            | **ACTION**                                    | **EXPECTATION**                                              | **RESULT**        |
-| ------------------- | --------------------------------------------- | ------------------------------------------------------------ | ----------------- |
-| Home page           | Size to 320px using Chrome Dev Tools          | Elements look good @ 320px                                   | Works as expected |
-| Home page           | Size to 1920px using Chrome Dev Tools         | Elements look good 1920px                                    | Works as expected |
-| Contact form        | Click send button without data in form fields | Cannot submit form                                           | Works as expected |
-| Nav bar - home page | Click nav buttons                             | That each nav element takes me to the correct page site page | Works as expected |
-
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+| **TEST**                 | **ACTION**                                                                                           | **EXPECTATION**                                                                                                                                                                                                                         | **RESULT**                  |
+| ------------------------ | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| Responsiveness           | Size to multiple device screens using Chrome Dev Tools                                               | Element resize and keep position                                                                                                                                                                                                        | Looks and works as expected |
+| Start Button             | Clicked                                                                                              | Display the 1st quiz question and start the timer                                                                                                                                                                                       | Works as expected           |
+| Answer buttons           | Clicked one answer to select it, then clicked another answer to make sure only one could be selected |                                                                                                                                                                                                                                         | Works as expected           |
+| Submit button            | Click submit answer                                                                                  | The selected answer is check to see if correct and if depending on result user gets alert notifying them if answer is correct or incorrect, it then moves onto the next question                                                        | Works as expected           |
+| Restart button           | Click Restart button                                                                                 | It will reset the quiz removing all the previous stats and go back to question one to start the quiz again                                                                                                                              | Works as expected           |
+| Footer Icon              | Click icon                                                                                           | It will open the MDN website page in new tab explaining more about javascript                                                                                                                                                           | Works as expected           |
+| Score & Question Counter | Answered questions                                                                                   | After answering a correct question the score counter will inrement by +1. Answering a question wrong will not cause the score counter to increment. The question counter will increment by +1 every time the user submits their answer. | Works as expected           |
+| Timer                    | Start quiz                                                                                           | The timer amount should be whats set in the quiz data questions value timer.                                                                                                                                                            | Works as expected           |
 
 ### Validator Testing
 
 - ## HTML
-- CSS
+
+  ![HTML Validation test](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/html-validation.png)
+
+- ## CSS
+  ![CSS Validation test](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/css-validation.png)
 
 ### Unfixed Bugs
 
