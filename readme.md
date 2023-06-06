@@ -72,6 +72,10 @@ I used figma to create the wireframes for this project. I created a wireframe fo
 
 - I went with a style choice that matached the terminal screen design on the app iTerm on mac. It has a black background and bright green text.
 
+### Typography
+
+The Font is Courier New. This font was chosen for its similarities to the font used in iTerm.
+
 ### Unfixed Bugs
 
 - hightlight.js is throwing up a deprecation warning. I left it to late to upgrade to the latest version of highlight.js.
