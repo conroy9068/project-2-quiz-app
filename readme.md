@@ -31,6 +31,7 @@ This is a quiz to test your knowledge of Javascript. The quiz will increment thr
 - A feature i would add is to use the localStorage of the browser to store the score in the browser.
 - The feature to highlight the correct and wrong answers after the user submits their answer.
 - A lifeline button that can be click once and it would remove two wrong answers to leave it 50/50
+- I would like to update highlight.js and use a dark theme for the code snippets so that it would work better with the rest of the design.
 
 ## Testing
 
@@ -68,7 +69,9 @@ I used figma to create the wireframes for this project. I created a wireframe fo
 
 ### Unfixed Bugs
 
-- hightlight.js is not working on the code snippets. It works when using the defaut theme but the snippet isnt very readable. When i try use a dark theme called dracula it doesnt work.
+- hightlight.js is throwing up a deprecation warning. I left it to late to upgrade to the latest version of highlight.js.
+
+![Link](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/highlight-js-warning.png)
 
 ## Deployment
 
