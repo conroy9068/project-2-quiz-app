@@ -59,8 +59,8 @@ This is a quiz to test your knowledge of Javascript. The quiz will increment thr
 ### Figma Wireframes
 
 I used figma to create the wireframes for this project. I created a wireframe for mobile and desktop. I used these wireframes as a guide to build the project.
-[Link](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/macbook-pro-16.png)
-[Link](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/iphone-8-plus.png)
+![Link](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/macbook-pro-16.png)
+![Link](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/iphone-8-plus.png)
 
 ### Design Choice
 
