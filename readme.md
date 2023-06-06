@@ -80,7 +80,7 @@ I used figma to create the wireframes for this project. I created a wireframe fo
 
 ## Deployment
 
-# Cloning CI Template
+### Cloning CI Template
 
 First step was to clone the Code Institute Template.
 
@@ -88,7 +88,7 @@ First step was to clone the Code Institute Template.
 - Click on the green button that says "Use this template"
 - Give the repository a name and click "Create repository from template"
 
-# Setting up GitHub Pages
+### Setting up GitHub Pages
 
 The process for setting up this site using GitHub pages was as follows:
 
@@ -98,7 +98,7 @@ The process for setting up this site using GitHub pages was as follows:
 - Under "Source", click the dropdown called "None" and select your master branch.
 - On the right hand side of the page, under "Enviroments", you will see a link to the deployed site.
 
-# Cloning the repository
+### Cloning the repository
 
 - Navigate to this link, [Link](https://github.com/conroy9068/project-2-quiz-app)
 - Click on the green button that says "Code"
@@ -112,7 +112,7 @@ The process for setting up this site using GitHub pages was as follows:
 git clone
 ```
 
-# Forking the repository
+### Forking the repository
 
 - Navigate to this link, [Link](https://github.com/conroy9068/project-2-quiz-app)
 - Click on the Fork button in the top right corner.
