@@ -113,7 +113,7 @@ const quizData = [
         timer: 25000, // 25 seconds
         codeSnippet: "let i = 0; while(i < 5) { i++; } console.log(i*2);",
     }
-]
+];
 
 /**
  * startBtnQuiz kicks off the quiz when the "Start Quiz" button is clicked. It gets rid of the rules, brings up the quiz and stats, along with the timer.
