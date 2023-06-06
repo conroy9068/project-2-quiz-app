@@ -121,7 +121,7 @@ git clone
 ## Credits
 
 - Leeds quiz app project, I used this project as a template to build my quiz app. [Link](https://github.com/andreas-ka/leeds-quiz)
-- I used this youtube tutorial to desigmn the questions answers and timer. [Link](https://www.youtube.com/watch?v=dtKciwk_si4&t=4308s)
+- I used this youtube tutorial to design the questions answers and timer. [Link](https://www.youtube.com/watch?v=dtKciwk_si4&t=4308s)
 
 ### Content
 
