@@ -4,6 +4,8 @@
 
 This is a quiz to test your knowledge of Javascript. The quiz will increment through a total of 10 questions. Each question has a set amount of time to be answered according to the difficulty of the question. There are question about basic javascript knoledge and then there are some questions contining code that you need to study and determine the correct output. The targeted users for this app are users that want to test their javascript knowledge and have fun while doing it.
 
+Click here to view live site - [Link](https://conroy9068.github.io/project-2-quiz-app/)
+
 ![App displayed on various devices](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/am-i-responsive.png)
 
 ## Features
@@ -57,6 +59,9 @@ This is a quiz to test your knowledge of Javascript. The quiz will increment thr
 
 ### Lighthouse Results
 
+![Desktop Lighthouse test](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/desktop-lighthouse-test.png)
+![Mobile Lighthouse test](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/mobile-lighthouse-test.png)
+
 ### Figma Wireframes
 
 I used figma to create the wireframes for this project. I created a wireframe for mobile and desktop. I used these wireframes as a guide to build the project.
@@ -75,6 +80,16 @@ I used figma to create the wireframes for this project. I created a wireframe fo
 
 ## Deployment
 
+# Cloning CI Template
+
+First step was to clone the Code Institute Template.
+
+- Navigate to this link, [Link](https://github.com/Code-Institute-Org/gitpod-full-template)
+- Click on the green button that says "Use this template"
+- Give the repository a name and click "Create repository from template"
+
+# Setting up GitHub Pages
+
 The process for setting up this site using GitHub pages was as follows:
 
 - Log in to GitHub and locate the GitHub Repository
@@ -83,7 +98,25 @@ The process for setting up this site using GitHub pages was as follows:
 - Under "Source", click the dropdown called "None" and select your master branch.
 - On the right hand side of the page, under "Enviroments", you will see a link to the deployed site.
 
-The live link can be found here - [Link](https://conroy9068.github.io/project-2-quiz-app/)
+# Cloning the repository
+
+- Navigate to this link, [Link](https://github.com/conroy9068/project-2-quiz-app)
+- Click on the green button that says "Code"
+- To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+- Open Git Bash
+- Change the current working directory to the location where you want the cloned directory to be made.
+- Type git clone, and then paste the URL you copied earlier.
+- Press Enter. Your local clone will be created.
+
+```
+git clone
+```
+
+# Forking the repository
+
+- Navigate to this link, [Link](https://github.com/conroy9068/project-2-quiz-app)
+- Click on the Fork button in the top right corner.
+- This will create a copy in your personal repository.
 
 ## Credits
 
