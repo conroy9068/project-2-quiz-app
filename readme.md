@@ -38,7 +38,7 @@ This is a quiz to test your knowledge of Javascript. The quiz will increment thr
 | ------------------------ | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
 | Responsiveness           | Size to multiple device screens using Chrome Dev Tools                                               | Element resize and keep position                                                                                                                                                                                                        | Looks and works as expected |
 | Start Button             | Clicked                                                                                              | Display the 1st quiz question and start the timer                                                                                                                                                                                       | Works as expected           |
-| Answer buttons           | Clicked one answer to select it, then clicked another answer to make sure only one could be selected |                                                                                                                                                                                                                                         | Works as expected           |
+| Answer buttons           | Clicked one answer to select it, then clicked another answer to make sure only one could be selected | Only one answer button can be selected, cliking on a second answer button will deselect the previous answer and select the newly clicked button.                                                                                        | Works as expected           |
 | Submit button            | Click submit answer                                                                                  | The selected answer is check to see if correct and if depending on result user gets alert notifying them if answer is correct or incorrect, it then moves onto the next question                                                        | Works as expected           |
 | Restart button           | Click Restart button                                                                                 | It will reset the quiz removing all the previous stats and go back to question one to start the quiz again                                                                                                                              | Works as expected           |
 | Footer Icon              | Click icon                                                                                           | It will open the MDN website page in new tab explaining more about javascript                                                                                                                                                           | Works as expected           |
@@ -53,6 +53,18 @@ This is a quiz to test your knowledge of Javascript. The quiz will increment thr
 
 - ## CSS
   ![CSS Validation test](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/css-validation.png)
+
+### Lighthouse Results
+
+### Figma Wireframes
+
+I used figma to create the wireframes for this project. I created a wireframe for mobile and desktop. I used these wireframes as a guide to build the project.
+[Link](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/macbook-pro-16.png)
+[Link](https://github.com/conroy9068/project-2-quiz-app/blob/main/assets/images/iphone-8-plus.png)
+
+### Design Choice
+
+- I went with a style choice that matached the terminal screen design on the app iTerm on mac. It has a black background and bright green text.
 
 ### Unfixed Bugs
 
